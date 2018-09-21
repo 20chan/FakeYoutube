@@ -5,8 +5,56 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FakeYoutube"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Visibility="Hidden"
+        Background="Transparent"
+        ShowInTaskbar="False"
+        MouseDown="Window_MouseDown"
+        Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize" AllowsTransparency="True" WindowStyle="None">
+    <Window.Resources>
+        <Style x:Key="pauseStyle" TargetType="{x:Type Image}">
+            <Style.Resources>
+                <Storyboard x:Key="Pause">
+                </Storyboard>
+            </Style.Resources>
+        </Style>
+        <Storyboard x:Key="PauseAnim">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.8"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="80"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="180"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="80"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="180"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="PlayAnim">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.8"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="80"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="180"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0" Value="80"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="180"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
+    <Grid x:Name="grid" MouseDown="Window_MouseDown">
+        <Image x:Name="image"
+            Opacity="0"
+            MouseDown="Window_MouseDown"
+            Width="80"
+            Height="80">
+            <Image.Source>
+                <ImageSource>Play.png</ImageSource>
+            </Image.Source>
+        </Image>
     </Grid>
 </Window>
