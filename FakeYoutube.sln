@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2016
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FakeYoutube", "FakeYoutube\FakeYoutube.csproj", "{F145C9D8-7FEC-4C27-9681-FC7D4B7994EF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F145C9D8-7FEC-4C27-9681-FC7D4B7994EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F145C9D8-7FEC-4C27-9681-FC7D4B7994EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F145C9D8-7FEC-4C27-9681-FC7D4B7994EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F145C9D8-7FEC-4C27-9681-FC7D4B7994EF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0765AE32-306A-4E83-B2A5-D1C288E37C29}
+	EndGlobalSection
+EndGlobal
